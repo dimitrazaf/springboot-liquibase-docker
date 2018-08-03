@@ -1,0 +1,18 @@
+version: '3'
+services:
+  postgres:
+    image: postgres
+    ports:
+    - "5432:5432"
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=testdb
+    volumes:
+      - ./db-data:/lib/data/
+volumes:
+  db-data:
+
+
+#docker-compose -f docker-compose.yml up
+#docker-compose -f docker-compose.yml up
